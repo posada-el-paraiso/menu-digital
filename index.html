@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú El Paraíso</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fce4ec; /* Fondo rosa claro */
+            color: #4a4a4a;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .menu-container {
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 450px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid #ffccdd; /* Borde rosa más oscuro */
+        }
+
+        .menu-container::before,
+        .menu-container::after {
+            content: '';
+            position: absolute;
+            background-image: url('https://i.imgur.com/tPRz2A4.png'); /* URL del conejito de Playboy (asegúrate de que esta URL sea accesible y permitida) */
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 40px;
+            height: 40px;
+            opacity: 0.3;
+        }
+
+        .menu-container::before {
+            top: 15px;
+            left: 15px;
+            transform: rotate(-20deg);
+        }
+
+        .menu-container::after {
+            bottom: 15px;
+            right: 15px;
+            transform: rotate(160deg);
+        }
+
+        .logo-section {
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo-section img {
+            max-width: 120px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .logo-section h1 {
+            font-family: 'Playfair Display', serif;
+            color: #e91e63; /* Rosa fuerte para el título */
+            font-size: 2.2em;
+            margin: 0;
+            letter-spacing: 1px;
+        }
+
+        .logo-section p {
+            font-family: 'Playfair Display', serif;
+            color: #880e4f; /* Rosa oscuro para el subtítulo */
+            font-size: 1em;
+            margin: 5px 0 0;
+            font-weight: 700;
+        }
+
+        .menu-category {
+            margin-bottom: 25px;
+        }
+
+        .menu-category h2 {
+            font-family: 'Playfair Display', serif;
+            color: #d81b60; /* Rosa vibrante para categorías */
+            font-size: 1.6em;
+            border-bottom: 2px solid #f8bbd0; /* Línea decorativa */
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .menu-category h2::after {
+            content: '♥';
+            color: #ffccdd;
+            position: absolute;
+            right: -25px;
+            font-size: 0.8em;
+            top: 5px;
+        }
+
+        .menu-category h2::before {
+            content: '♥';
+            color: #ffccdd;
+            position: absolute;
+            left: -25px;
+            font-size: 0.8em;
+            top: 5px;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        .item-name {
+            font-weight: 400;
+            flex-grow: 1;
+            text-align: left;
+        }
+
+        .item-price {
+            font-weight: 700;
+            color: #e91e63; /* Rosa fuerte para precios */
+            margin-left: 15px;
+        }
+
+        .separator {
+            border-bottom: 1px dashed #f8bbd0;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <div class="logo-section">
+            <img src="https://i.imgur.com/ooIde4H.png" alt="Logo El Paraíso">
+            <h1>MENÚ</h1>
+        </div>
+        <div class="menu-category">
+            <h2>Bebidas</h2>
+            <div class="menu-item">
+                <span class="item-name">Cerveza Nacional</span>
+                <span class="item-price">$80 MXN</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Cerveza Importada</span>
+                <span class="item-price">$120 MXN</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Michelada Clásica</span>
+                <span class="item-price">$100 MXN</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Michelada Especial</span>
+                <span class="item-price">$130 MXN</span>
+            </div>
+        </div>
+
+        <div class="menu-category">
+            <h2>Comidas</h2>
+            <div class="menu-item">
+                <span class="item-name">Botana Mixta</span>
+                <span class="item-price">$150 MXN</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Papas a la Francesa</span>
+                <span class="item-price">$90 MXN</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Nachos con Queso</span>
+                <span class="item-price">$120 MXN</span>
+            </div>
+        </div>
+
+        <div class="menu-category">
+            <h2>Botellas</h2>
+            <div class="menu-item">
+                <span class="item-name">Buchanan's 12 Años</span>
+                <span class="item-price">$2,500 MXN</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Tequila Don Julio Reposado</span>
+                <span class="item-price">$1,800 MXN</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Bacardí Blanco</span>
+                <span class="item-price">$950 MXN</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Mezcal Unión Joven</span>
+                <span class="item-price">$1,100 MXN</span>
+            </div>
+        </div>
+
+        <div class="menu-category">
+            <h2>SERVICIO LAS 24 HORAS</h2>
+        </div>
+    </div>
+</body>
+</html>
